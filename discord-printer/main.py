@@ -6,6 +6,10 @@ from itertools import zip_longest
 import requests
 from math import sqrt
 
+TOKEN = ""
+EMOJI_GUILD1 = 0
+EMOJI_GUILD2 = 0
+
 client = Client()
 
 emojis = []
@@ -51,7 +55,7 @@ colors = []
 async def on_ready():
     global colors
     global emojis
-    emojis = client.get_guild(853008775447445564).emojis + client.get_guild(853009024734986250).emojis
+    emojis = client.get_guild(EMOJI_GUILD1).emojis + client.get_guild(EMOJI_GUILD2).emojis
     colors = [hex_to_rgb(emoji.name) for emoji in emojis]
     print("redy")
     
@@ -106,4 +110,9 @@ async def on_message(message):
         #     cache_msg = await imgmsg[-1].channel.fetch_message(imgmsg[-1].id)
         #     reaction_count = cache_msg.reactions[0].count
 
-client.run('NzAwMjAzMTMzNTYwOTQ2NzI4.Xpfg_A.Ie67iMTXqaQqt6gS2m0YFmPvavY')
+if not TOKEN or not EMOJI_GUILD1 or not EMOJI_GUILD2:
+    print("Please supply a bot token and emoji guilds' ids inside main.py")
+    exit()
+
+client.run(TOKEN)
+
