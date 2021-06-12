@@ -34,7 +34,7 @@ class game:
         self.turn = 2 if turn == 1 else 1
 
     def tutorial(self):
-        print("Hello! This is a simple tic-tac-toe game.\n"
+        print("This is a simple tic-tac-toe game.\n"
               "To make a move, input two numbers: x and y\n"
               "this is '11' |\n"
               "            \/\n"
