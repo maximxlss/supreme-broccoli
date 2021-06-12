@@ -22,6 +22,7 @@ def levelUp(i):
 
 instance = game(money_update_callback=money_update)
 
+# idk how it works, just copy-pasted frame with scroll
 class ScrollFrame(Frame):
     def __init__(self, parent):
         super().__init__(parent) # create a frame (self)
