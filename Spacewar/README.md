@@ -13,3 +13,5 @@ Simple unfinished game inspired by Spacewar in Python with tk. Run [game.py](./g
 Controls: Arrows
 
 Was just an experiment with gravity physics
+
+Run [bug.py](./bug.py) to see a weird bug that I encountered while developing.
