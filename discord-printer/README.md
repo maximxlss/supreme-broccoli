@@ -6,6 +6,7 @@
 - `Discord.py` - `pip install discord.py`
 - PIL - `pip install Pillow`
 - requests - `pip install requests`
+- Discord bot with token. Insert token into main.py.
 - Discord guilds with color emojis. Emojis can be generated with [a script](./pixels-generator/). Insert their ids into main.py. You need to invite bot into them.
 
 ## Description
