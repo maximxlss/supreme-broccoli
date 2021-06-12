@@ -6,6 +6,6 @@
 
 ## Decription
 
-A weird unfinished clicker thing. Run [example.py](./example.py).
+A weird unfinished clicker thing in Python with tk. Run [example.py](./example.py).
 
 Custom workers doesn't work.
