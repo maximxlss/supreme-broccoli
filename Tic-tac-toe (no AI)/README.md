@@ -1,4 +1,4 @@
-# Spacewar
+# Tic-tac-toe (no AI)
 
 ## Dependencies
 
