@@ -3,7 +3,6 @@
 ## Dependencies
 
 - Python 3
-- Numpy - `pip install numpy`
 
 ## Decription
 
