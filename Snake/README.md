@@ -1,4 +1,4 @@
-# Clicker
+# Snake
 
 ## Dependencies
 
