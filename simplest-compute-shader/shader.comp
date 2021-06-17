@@ -1,0 +1,32 @@
+#version 430
+
+#define array_size 10
+
+// local work group size (3D)
+// local_size_y and local_size_z can also be specified
+layout(local_size_x=1) in;
+
+// SSBO layout
+// binding 0 (as array_a was bound in code)
+// buffer is called in_0 (not really sure what this does)
+// buffer_a is arbitary-sized integer array
+layout (std430, binding = 0) buffer in_0
+{
+    int buffer_a[];
+};
+
+// same here
+layout (std430, binding = 1) buffer inout_0
+{
+    int buffer_b[];
+};
+
+// this function will be executed for every invocation in every work group
+// in this example work group is (1, 1, 1) shaped so there is only one invocation for every work group
+void main()
+{
+    // gl_WorkGroupID is the index of current work group
+    // it is the same for different invocations in one work group
+    const int n = int(gl_WorkGroupID.x);
+    buffer_b[n] *= buffer_a[n];
+}
