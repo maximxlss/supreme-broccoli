@@ -1,3 +1,5 @@
+import asyncio
+
 from game import *
 from tkinter import * 
 from numberNaming import *
@@ -115,6 +117,9 @@ async def mainloop():
         root.update_idletasks()
         await sleep(0.01)
     loop.stop()
+
+loop = asyncio.new_event_loop()
+asyncio.set_event_loop(loop)
 
 loop = get_event_loop()
 loop.create_task(gameloop())
